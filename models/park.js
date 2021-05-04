@@ -10,7 +10,18 @@ Park.prototype.addDino = function(newDino) {
 
 Park.prototype.removeDino = function(Dino) {
     this.dinoCollection.pop(Dino);
-}
+};
+
+Park.prototype.findMostPopularDino = function() {
+    let currentMaximum = 0;
+    let mostPopularDino;
+    for (let dino of this.dinoCollection) {
+        if (dino.guestsAttractedPerDay > currentMaximum) {
+            mostPopularDino = dino
+        };
+    };
+    return mostPopularDino.species;
+};
 
 
 module.exports = Park;
