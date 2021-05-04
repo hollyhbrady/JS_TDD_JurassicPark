@@ -24,5 +24,15 @@ Park.prototype.findMostPopularDino = function() {
     return mostPopularDino.species;
 };
 
+Park.prototype.countDinoOfSpecies = function(species) {
+    let speciesTotal = 0;
+    for (let dino of this.dinoCollection) {
+        if (dino.species === species) {
+            speciesTotal += 1
+            };
+        };
+    return speciesTotal
+};
+
 
 module.exports = Park;

@@ -11,6 +11,7 @@ describe('Park', function() {
     park = new Park('Jurassic', 100);
     dino1 = new Dinosaur('Funosaurus', 'Carnivore', 20);
     dino2 = new Dinosaur('Triceratops', 'Omnivore', 30);
+    dino3 = new Dinosaur('Triceratops', 'Omnivore', 25);
   });
 
   it('should have a name', function() {
@@ -48,7 +49,13 @@ describe('Park', function() {
     assert.strictEqual(result, 'Triceratops')
   });
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function() {
+    park.addDino(dino1);
+    park.addDino(dino2);
+    park.addDino(dino3);
+    const result = park.countDinoOfSpecies('Triceratops');
+    assert.strictEqual(result, 2)
+  });
 
   it('should be able to calculate the total number of visitors per day');
 
