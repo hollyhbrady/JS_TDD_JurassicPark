@@ -73,6 +73,12 @@ describe('Park', function() {
     assert.strictEqual(result, 23400) // assuming open 6 days per week, 6 x 52, 312 x 75
   });
 
-  it('should be able to calculate total revenue for one year');
+  it('should be able to calculate total revenue for one year', function () {
+    park.addDino(dino1);
+    park.addDino(dino2);
+    park.addDino(dino3);
+    const result = park.revenueForYear();
+    assert.strictEqual(result, 2340000) // guests per year x ticket price 100
+  });
 
 });
