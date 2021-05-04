@@ -17,9 +17,10 @@ Park.prototype.findMostPopularDino = function() {
     let mostPopularDino;
     for (let dino of this.dinoCollection) {
         if (dino.guestsAttractedPerDay > currentMaximum) {
+            currentMaximum = dino.guestsAttractedPerDay
             mostPopularDino = dino
+            };
         };
-    };
     return mostPopularDino.species;
 };
 
