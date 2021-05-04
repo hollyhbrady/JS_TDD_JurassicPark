@@ -31,8 +31,15 @@ Park.prototype.countDinoOfSpecies = function(species) {
             speciesTotal += 1
             };
         };
-    return speciesTotal
+    return speciesTotal;
 };
 
+Park.prototype.visitorsPerDay = function() {
+    let visitors = 0;
+    for (let dino of this.dinoCollection) {
+        visitors += dino.guestsAttractedPerDay
+    };
+    return visitors;
+};
 
 module.exports = Park;
