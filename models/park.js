@@ -42,4 +42,12 @@ Park.prototype.visitorsPerDay = function() {
     return visitors;
 };
 
+Park.prototype.visitorsPerYear = function() {
+    let visitors = 0;
+    for (let dino of this.dinoCollection) {
+        visitors += dino.guestsAttractedPerDay
+    };
+    return visitors * 312
+};
+
 module.exports = Park;
