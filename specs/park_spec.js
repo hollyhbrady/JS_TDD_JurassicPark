@@ -3,12 +3,20 @@ const Park = require('../models/park.js');
 const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
+  
+  let park;
+  // let dino stuuf
 
   beforeEach(function () {
+    park = new Park('Jurassic', 100);
+    dino1 = new Dinosaur()
+  });
 
-  })
+  it('should have a name', function() {
+    const actual = park.name;
+    assert.strictEqual(actual, 'Jurassic')
+  });
 
-  it('should have a name');
 
   it('should have a ticket price');
 
