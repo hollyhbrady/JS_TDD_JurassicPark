@@ -44,10 +44,7 @@ Park.prototype.visitorsPerDay = function() {
 
 Park.prototype.visitorsPerYear = function() {
     let visitors = 0;
-    for (let dino of this.dinoCollection) {
-        visitors += dino.guestsAttractedPerDay
-    };
-    return visitors * 312
+    return visitors += this.visitorsPerDay() * 312; // 6 days x 52 weeks = 312 days open per year
 };
 
 Park.prototype.revenueForYear = function() {
